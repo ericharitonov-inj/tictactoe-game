@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/background">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tic Tac Toe"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/title"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Score Board -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/score_card_x"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player X"
+                android:textColor="@color/player_x"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/tv_score_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/player_x"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/score_card_o"
+            android:padding="12dp"
+            android:layout_marginStart="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player O"
+                android:textColor="@color/player_o"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/tv_score_o"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/player_o"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player X's Turn"
+        android:textSize="20sp"
+        android:textColor="@color/status_text"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Game Grid -->
+    <GridLayout
+        android:id="@+id/grid_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_marginBottom="24dp">
+
+        <Button android:id="@+id/btn_00" style="@style/CellButton"/>
+        <Button android:id="@+id/btn_01" style="@style/CellButton"/>
+        <Button android:id="@+id/btn_02" style="@style/CellButton"/>
+        <Button android:id="@+id/btn_10" style="@style/CellButton"/>
+        <Button android:id="@+id/btn_11" style="@style/CellButton"/>
+        <Button android:id="@+id/btn_12" style="@style/CellButton"/>
+        <Button android:id="@+id/btn_20" style="@style/CellButton"/>
+        <Button android:id="@+id/btn_21" style="@style/CellButton"/>
+        <Button android:id="@+id/btn_22" style="@style/CellButton"/>
+    </GridLayout>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:text="New Game"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/reset_btn"
+        android:textColor="@android:color/white"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>

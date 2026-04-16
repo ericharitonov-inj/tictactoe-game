@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/score_card_x" />
+    <foreground android:drawable="@drawable/score_card_o" />
+    <monochrome android:drawable="@drawable/score_card_o" />
+</adaptive-icon>
